@@ -24,7 +24,7 @@ export default class TabThreeScreenOne extends React.Component {
 
         <TouchableOpacity
           onPress={
-            () => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:0} })
+            () => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:1} })
           }
           style={{
             padding:20,
