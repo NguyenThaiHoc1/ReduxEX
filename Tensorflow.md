@@ -153,3 +153,10 @@ print("image " + image_path.split('.')[0] + '_labeled.jpg')
                 key = cv2.waitKey(10) & 0xFF
                 if key==27:
                     break
+
+
+
+https://ideone.com/9JKJCj
+https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721
+https://medium.com/technologymadeeasy/the-best-explanation-of-convolutional-neural-networks-on-the-internet-fbb8b1ad5df8
+https://www.topbots.com/14-design-patterns-improve-convolutional-neural-network-cnn-architecture/
