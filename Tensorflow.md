@@ -155,8 +155,32 @@ print("image " + image_path.split('.')[0] + '_labeled.jpg')
                     break
 
 
-
 https://ideone.com/9JKJCj
 https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721
 https://medium.com/technologymadeeasy/the-best-explanation-of-convolutional-neural-networks-on-the-internet-fbb8b1ad5df8
 https://www.topbots.com/14-design-patterns-improve-convolutional-neural-network-cnn-architecture/
+https://github.com/oarriaga/face_classification
+
+
+https://www.quora.com/What-is-the-deep-neural-network-known-as-%E2%80%9CResNet-50%E2%80%9D
+
+
+
+
+http://blog.dlib.net/2017/02/high-quality-face-recognition-with-deep.html
+
+
+CNN overview
+http://cs231n.github.io/convolutional-networks/#overview
+
+
+
+code 
+https://github.com/oarriaga/face_classification
+
+https://github.com/forsythe/tensorflow-emotion-detection
+
+
+
+
+
