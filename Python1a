@@ -1,0 +1,57 @@
+print '-------------'
+            box = tuple(boxes[0].tolist())
+            print box[0]
+            #print np.squeeze(image_tensor)
+            #print np.squeeze(boxes[0, 1, :])
+            #print boxes.shape
+            #print boxes.shape[0]
+            #print np.squeeze(boxes[0])
+            print np.squeeze(scores) # de lay gia tri cua no ra 
+            #print np.squeeze(classes)
+            #print np.squeeze(num_detections)
+            print '-------------'
+
+            # C2: 
+            #img = cv2.imread(image_path,0)
+            width, height = image.size # size cua tam anh 
+
+            # get khuon mat duoc dinh vi tu tensorflow
+            #ymin, xmin, ymax, xmax = boxes[0, 0, :]
+
+            #(left, right, top, bottom) = (xmin * width, xmax * width, ymin * height, ymax * height)
+
+            #left = left.astype(np.int32)
+            #right = right.astype(np.int32)
+            #top = top.astype(np.int32)
+            #bottom = bottom.astype(np.int32)
+            
+            #cv2.rectangle(img, (left.astype(np.int32),top.astype(np.int32)), (right.astype(np.int32),bottom.astype(np.int32)), (255, 0, 0), 3)
+            #cv2.imshow('frame', cv2.resize(img, (800, 600)))
+            #cv2.waitKey(0)
+
+            # -------
+
+            #draw = ImageDraw.Draw(image)
+            #draw.rectangle([(left, top), (right, bottom)], outline='red')
+            #image.save('./img/rslx-1.jpg', "JPEG")
+            # bang thu vien chuan cua Tensorflow
+            #plt.figure(figsize=IMAGE_SIZE)
+            #plt.imshow(image_np)
+            #plt.show()
+
+
+
+            # khuc nay se phat trien thanh lay nhieu khuon mat trong tam anh
+            draw = ImageDraw.Draw(image)
+
+            for img_number in range(boxes.shape[1]):
+                if np.squeeze(scores)[img_number] <= 0.5:
+                    continue
+                ymin, xmin, ymax, xmax = boxes[0, img_number, :]
+                (left, right, top, bottom) = (xmin * width, xmax * width, ymin * height, ymax * height)
+                left = left.astype(np.int32)
+                right = right.astype(np.int32)
+                top = top.astype(np.int32)
+                bottom = bottom.astype(np.int32)
+                draw.rectangle([(left, top), (right, bottom)], outline='red')
+            image.save('./img/rslx-1.jpg', "JPEG")
