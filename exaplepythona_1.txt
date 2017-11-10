@@ -113,8 +113,8 @@ TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'imageji{}.jpg'.forma
 IMAGE_SIZE = (12, 8)
 
 # font word
-fnt = ImageFont.truetype('Pillow/Tests/fonts/FreeMono.ttf', 40)
-
+font = ImageFont.truetype('Pillow/Tests/fonts/FreeMono.ttf', 40)
+#font = ImageFont.truetype("open-sans/OpenSans-Regular.ttf", 8)
 
 with detection_graph.as_default():
   with tf.Session(graph=detection_graph) as sess:
@@ -200,8 +200,9 @@ with detection_graph.as_default():
           print emotion_text
           
 
-          #draw.rectangle([(left, top), (right, bottom)], outline='red')
-          draw.text((20, 70), "something123", font=ImageFont.truetype("font_path123"))
+          draw.rectangle([(left, top), (right, bottom)], outline='red')
+          draw.text([(left, bottom)], emotion_text, (0, 255, 0), font=font)
+          #draw.text((20, 70), "something123", font=ImageFont.truetype("font_path123"))
 
           
       imagesx.save('./test_images/rslx-1.jpg', "JPEG")
