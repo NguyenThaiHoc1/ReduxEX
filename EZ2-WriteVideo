@@ -1,0 +1,23 @@
+import numpy as np
+import cv2
+import os
+
+
+#fourcc = cv2.VideoWriter_fourcc('m','p','4','v')
+#out = cv2.VideoWriter('./media/outputa.m4v', fourcc, 30.0, None)
+#fourcc = cv2.CV_FOURCC(*'XVID')  # cv2.VideoWriter_fourcc() does not exist
+#video_writer = cv2.VideoWriter("./media/outputa.m4v", fourcc, 20, (680, 480))
+
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+out = cv2.VideoWriter('./media/output1.mp4',fourcc, 15.0, (1280, 720))
+
+PATH_TO_TEST_IMAGES_DIR = 'MTP'
+TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'rslx-{}.jpg'.format(i)) for i in range(1, 2054) ]
+
+for image_path in TEST_IMAGE_PATHS:
+	print image_path
+	imagesx = cv2.imread(image_path)
+	out.write(imagesx)
+out.release()
+cv2.destroyAllWindows()
+print("\n\nBye bye\n")
