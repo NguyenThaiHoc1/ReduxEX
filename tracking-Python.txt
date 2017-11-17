@@ -1,0 +1,18 @@
+https://github.com/abhineet123/Deep-Learning-for-Tracking-and-Detection
+
+
+http://www.tnt.uni-hannover.de/papers/data/912/LeaPonRos11SFMLP.pdf
+https://github.com/Smorodov/Multitarget-tracker
+
+\
+
+// khong linear nhung ma theo so 
+https://github.com/spencer-project/spencer_people_tracking
+
+
+http://www.eecs.qmul.ac.uk/~andrea/thdt.html
+
+
+code http://dlib.net/correlation_tracker.py.html
+https://github.com/bikz05/object-tracker
+
